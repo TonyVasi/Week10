@@ -1,0 +1,75 @@
+public class Automobile
+{
+    int doors;
+    int cylinders;
+    int transmission;
+    String color;
+    String name;
+    public Automobile()
+    {
+        doors = 0;
+        cylinders = 0;
+        transmission = 0;
+        color = "";
+        name = "";
+    }
+    public int setNumberOfDoors(int d)
+    {
+        doors = d;
+        return doors;
+    }
+    public int setNumberOfCylinders(int c)
+    {
+        cylinders = c;
+        return cylinders; 
+    }
+    public int setTransmission(int t)
+    {
+        transmission = t;
+        return transmission;
+    }
+    public String setColor(String c)
+    {
+        color = c;
+        return color;
+    }
+    public String setName(String n)
+    {
+        name = n;
+        return name;
+    }
+    public String about()
+    {
+        System.out.println("Number of doors: " + doors);
+        System.out.println("Number of cylinders: " + cylinders);
+        System.out.println("Transmission: " + transmission);
+        System.out.println("Color: " + color);
+        System.out.println("Name: " + name);
+        return name;
+    }
+}
+
+
+public class Cars
+{
+    public static void main(String args[])
+    {
+        Automobile yellow = new Automobile();
+        yellow.setNumberOfDoors(4);
+        yellow.setColor("Yellow");
+        yellow.setName("Cabbie");
+        yellow.about();
+        
+        Automobile red = new Automobile();
+        red.setNumberOfDoors(2);
+        red.setColor("Red");
+        red.setName("Sporty");
+        red.about();
+        
+        Automobile green = new Automobile();
+        green.setNumberOfDoors(5);
+        green.setColor("Green");
+        green.setName("Vanny");
+        green.about();
+    }
+}

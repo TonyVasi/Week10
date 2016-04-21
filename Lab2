@@ -36,6 +36,12 @@ public class GuessANumber
 public class RandomNumber
 {
     private int num = 0;
+    public RandomNumber()
+    {}
+    public RandomNumber(int high)
+    {
+        num = 1 + (int)(Math.random()*high);
+    }
     public int GetANumber_Between_1_And_10(int high)
     {
         num = 1 + (int)(Math.random()*high);
@@ -55,4 +61,3 @@ public class RandomNumber
         return high;
     }
 }
-

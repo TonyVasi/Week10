@@ -1,0 +1,38 @@
+import java.util.Scanner;
+
+public class GuessANumber
+{
+    public static void main(String args[])
+    {
+        RandomNumber random = new RandomNumber();
+        Scanner input = new Scanner(System.in);
+        System.out.println("Guess a number between 1 and 10.");
+        int guess = input.nextInt();
+        int answer = random.getANumber();
+        if(guess == answer)
+        {
+            System.out.println("You got it!");
+        } 
+        else
+        {
+            System.out.println("Sorry, you didn't get it!");
+        }
+        System.exit(0);
+    }
+}
+
+
+public class RandomNumber
+{
+    private int num = 0;
+    public int GetANumber_Between_1_And_10(int high)
+    {
+        num = 1 + (int)(Math.random()*high);
+        return num;
+    }
+    public int getANumber()
+    {
+        num = 1 + (int)(Math.random()*10);
+        return num;
+    }
+}
